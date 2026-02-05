@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Kapp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+
+  <!-- 👇 landing agregado -->
+  <body class="dark landing">
+    <div class="layout">
+      <!-- Sidebar -->
+      <aside class="sidebar collapsed" id="sidebar">
+        <!-- Toggle -->
+        <button class="toggle-btn" id="toggleSidebar">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <!-- Menú -->
+        <nav class="menu">
+          <button class="menu-item" title="Menu Principal" data-section="home">
+            <i class="fa-solid fa-house"></i>
+            <span class="label">Inicio</span>
+          </button>
+
+          <button class="menu-item" title="Empleados" data-section="empleados">
+            <i class="fa-solid fa-user"></i>
+            <span class="label">Empleados</span>
+          </button>
+
+          <button class="menu-item" title="Calculos" data-section="calculos">
+            <i class="fa-solid fa-calculator"></i>
+            <span class="label">Cálculos</span>
+          </button>
+
+          <button
+            class="menu-item"
+            title="Proveedores"
+            data-section="proveedores"
+          >
+            <i class="fa-solid fa-truck"></i>
+            <span class="label">Proveedores</span>
+          </button>
+
+          <button class="menu-item" title="Facturas" data-section="facturas">
+            <i class="fa-solid fa-file-invoice"></i>
+            <span class="label">Facturas</span>
+          </button>
+        </nav>
+
+        <!-- Opciones -->
+        <div class="options">
+          <button
+            class="menu-item"
+            title="Configuraciones"
+            data-section="config"
+          >
+            <i class="fa-solid fa-gear"></i>
+            <span class="label">Configuración</span>
+          </button>
+        </div>
+      </aside>
+
+      <!-- Contenido principal -->
+      <main class="content" id="content">
+        <h1>Kapp</h1>
+        <p>Mamita, este programa es echo con amor para ti</p>
+      </main>
+    </div>
+
+    <!-- JS -->
+    <script src="renderer.js"></script>
+  </body>
+</html>

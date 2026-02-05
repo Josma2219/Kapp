@@ -1,0 +1,98 @@
+<section class="employees">
+  <!-- ===== Header ===== -->
+  <header class="employees-header">
+    <input
+      type="text"
+      placeholder="Buscar empleado..."
+      class="search-input"
+      disabled
+    />
+
+    <select class="order-select" disabled>
+      <option>Ordenar por...</option>
+    </select>
+
+    <button class="btn-primary" id="openEmployeeModal">+ Nuevo empleado</button>
+  </header>
+
+  <!-- ===== Grid vacío (se llena por JS) ===== -->
+  <div class="employees-grid" id="employeesGrid">
+    <!-- aquí se insertan las tarjetas -->
+  </div>
+</section>
+
+<!-- ===== Modal ===== -->
+<div class="modal hidden" id="employeeModal">
+  <div class="modal-content">
+    <h2>Nuevo empleado</h2>
+
+    <form id="employeeForm">
+      <label>
+        Nombre completo
+        <input type="text" id="empName" required />
+      </label>
+
+      <label>
+        Restaurante
+        <select id="empRestaurant"></select>
+      </label>
+
+      <label>
+        Estado
+        <select id="empStatus">
+          <option value="activo">Activo</option>
+          <option value="inactivo">Inactivo</option>
+        </select>
+      </label>
+
+      <label>
+        Foto (opcional)
+        <input type="file" id="empPhoto" accept="image/*" />
+      </label>
+
+      <div class="modal-actions">
+        <button type="button" class="btn-secondary" id="closeEmployeeModal">
+          Cancelar
+        </button>
+        <button type="submit" class="btn-primary">Guardar</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div id="employeeDetailsModal" class="modal hidden">
+  <div class="modal-content large">
+
+    <!-- Header -->
+    <div class="details-header">
+      <div class="details-avatar">
+        <img id="detailsPhoto" />
+        <i id="detailsIcon" class="fa-solid fa-user"></i>
+      </div>
+
+      <div class="details-main">
+        <h2 id="detailsName"></h2>
+        <p id="detailsRestaurant"></p>
+        <span id="detailsStatus"></span>
+      </div>
+
+      <button id="closeDetailsModal" class="close-btn">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <!-- Tabs -->
+    <div class="details-tabs">
+      <button data-tab="payments" class="tab active">Historial de pagos</button>
+      <button data-tab="vacations" class="tab">Vacaciones</button>
+      <button data-tab="marks" class="tab">Marcas</button>
+      <button data-tab="absences" class="tab">Ausencias</button>
+    </div>
+
+    <!-- Content -->
+    <div class="details-content" id="detailsContent">
+      <p>Seleccione una opción</p>
+    </div>
+
+  </div>
+</div>
